@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EletrixPaste - View Paste</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .paste-text {
+            border: 1px solid #ccc;
+            padding: 20px;
+            background-color: #fff;
+        }
+
+        nav {
+            background-color: #444;
+            color: #fff;
+            padding: 10px 0;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 20px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>EletrixPaste - View Paste</h1>
+    </header>
+    
+    <nav>
+        <a href="/">Home</a>
+        <a href="/create">Create Paste</a>
+        <a href="/helpview">View</a>
+    </nav>
+
+    <div class="container">
+        <h2>View Paste</h2>
+        <div class="paste-text">
+            <pre>{{ text }}</pre>
+        </div>
+        <h1>Raw Data</h1>
+        <div class"paste-text">
+        <pre><iframe src={{ raw_data_url }} allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe></pre>
+        <div>
+    </div>
+    <footer>
+        <h5>EletrixPaste</h5>
+        <h5>Version {{VERSION}}</h5>
+    
+    
+    </footer>
+</body>
+</html>
