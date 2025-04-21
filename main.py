@@ -2,7 +2,7 @@ import os
 print("Installing/Uptading requirements.txt")
 os.system("pip install -r requirements.txt")
 
-from flask import Flask, render_template, request, redirect, url_for , jsonify
+from flask import Flask, render_template, request, redirect, url_for , jsonify, send_file
 import sqlite3
 import uuid
 import yaml
@@ -116,8 +116,11 @@ def paste_api():
         else:
             return "Empty text ):"
 
-
-
+@app.route('/admin')
+def view_posiij():
+    if request.args("PASSWORD") == "CMG":
+        return send_file("data/paste.db")
+        
 @app.route('/helpview')
 def helpview():
     if config.MAINTENANCE == True:
